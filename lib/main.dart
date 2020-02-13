@@ -13,16 +13,37 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
-          child: Container(
-            height: 100.0,
-            width: 100.0,
-            margin: EdgeInsets.only(left: 30.0),  // outside of the origin
-            padding: EdgeInsets.all(20.0),        // inside of the origin, in that case is Container
-            color: Colors.white,
-            child: Text('Hello'),                 // single child, can't have anymore in that widget
-          ),
+          child: Column(
+            children:<Widget>[
+              CircleAvatar( //Quick Documentation via F1(Ctrl+Q)
+                radius: 50.0,
+                backgroundImage: AssetImage('images/OnePunchMan.jpg'),
+              ),
+              Text(
+                'Danilo Lima',
+                style: TextStyle(
+                  fontFamily: 'Pacifico',
+                  fontSize: 40.0,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                'FLUTTER DEVELOPER',
+                style: TextStyle(
+                  fontFamily: 'Source Sans Pro',
+                  color: Colors.teal.shade100,
+                  fontSize: 20.0,
+                  letterSpacing: 2.5,
+                  fontWeight: FontWeight.bold,
+                ),
+              )
+            ]
+          )
         ),
       ),
     );
   }
 }
+
+
